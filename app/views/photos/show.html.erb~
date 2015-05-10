@@ -1,0 +1,9 @@
+<p>
+  <strong>Name:</strong>
+  <%= @photo.title %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>

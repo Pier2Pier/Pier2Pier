@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "videoviewer.css.scss" %>
+<%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
+<!--<img id="logo" src="/images/pier2pier-logo.png" alt="Pier2Pier" width="286" height="83">-->
+<div class="vidcontainer">
+</div>
+
+<div class="vidcontrols">
+</div>
+
+<div class="piccontainer">
+</div>
+
+<div class="loccontainer">
+</div>

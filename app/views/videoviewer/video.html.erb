@@ -2,9 +2,7 @@
 <div class="pier2pier">
 <%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
 </div>
-<div class="vidcontainer">
-<%=video_tag(["out.mp4"], :size => "1280x720", :controls=>true) %>
-</div>
+<div id="myElement-teststream">Loading the player...</div>
 
 <div class="vidcontrols">
 </div>
@@ -14,3 +12,16 @@
 
 <div class="loccontainer">
 </div>
+
+<script type="text/javascript">
+    jwplayer("myElement-teststream").setup({
+        playlist: [{
+            sources: [{
+                file: "rtmp://129.65.153.151:1935/live/teststream"
+            }]
+        }],
+        height: 400,
+        primary: "flash",
+        width: 600
+    });
+</script>

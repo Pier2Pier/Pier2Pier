@@ -2,9 +2,9 @@
 <div class="pier2pier">
 <%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
 </div>
-<div id="myElement-teststream">Loading the player...</div>
-
+<div id="vidcontainer">Loading the player...</div>
 <div class="vidcontrols">
+<%=image_tag("arrow_up.png", alt: "go up", size: "82x135")%>
 </div>
 
 <div class="piccontainer">
@@ -14,14 +14,14 @@
 </div>
 
 <script type="text/javascript">
-    jwplayer("myElement-teststream").setup({
+    jwplayer("vidcontainer").setup({
         playlist: [{
             sources: [{
                 file: "rtmp://129.65.153.151:1935/live/teststream"
             }]
         }],
-        height: 400,
         primary: "flash",
-        width: 600
+        width: "600",
+        height: "480"
     });
 </script>

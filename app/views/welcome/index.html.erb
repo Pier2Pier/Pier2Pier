@@ -1,1 +1,22 @@
-<h1>Hello, Rails!</h1>
+<html>
+<head>
+<script src="jwplayer/jwplayer.js"></script>
+</head>
+<body>
+<div id="myElement-teststream">Loading the player...</div>
+
+<script type="text/javascript">
+    jwplayer("myElement-teststream").setup({
+        playlist: [{
+            sources: [{
+                file: "rtmp://129.65.153.151:1935/live/teststream"
+            }]
+        }],
+        height: 400,
+        primary: "flash",
+        width: 600
+    });
+</script>
+</body>
+</html>
+

@@ -1,2 +1,22 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<html>
+<head>
+<script src="jwplayer/jwplayer.js"></script>
+</head>
+<body>
+<div id="myElement-teststream">Loading the player...</div>
+
+<script type="text/javascript">
+    jwplayer("myElement-teststream").setup({
+        playlist: [{
+            sources: [{
+                file: "rtmp://129.65.153.151:1935/live/teststream"
+            }]
+        }],
+        height: 1080,
+        primary: "flash",
+        width: 1920
+    });
+</script>
+</body>
+</html>
+

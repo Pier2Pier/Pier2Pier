@@ -1,12 +1,13 @@
 <%= stylesheet_link_tag "videoviewer.css.scss" %>
+<script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script>
 <div class="pier2pier">
 <%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
 </div>
-<div class="vidcontainer">
-<%=video_tag(["out.mp4"], :size => "800x600", :controls=>true) %>
-</div>
-
+<div id="vidcontainer">Loading the player...</div>
 <div class="vidcontrols">
+<%= link_to image_tag("arrow_up.png", alt: "go up", size: "41x68"), root_path, id: "move_up", class: 'move_up', :remote => true, method: :post %>
+<br>
+<%= link_to image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped"), :id => "move_down", :remote => true %>
 </div>
 
 <div class="piccontainer">
@@ -14,3 +15,16 @@
 
 <div class="loccontainer">
 </div>
+
+<script type="text/javascript">
+    jwplayer("vidcontainer").setup({
+        playlist: [{
+            sources: [{
+                file: "rtmp://129.65.153.151:1935/live/teststream"
+            }]
+        }],
+        primary: "flash",
+        width: "600",
+        height: "480"
+    });
+</script>

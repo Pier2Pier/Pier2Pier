@@ -3,10 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # $('#move_up').onload ->
 $('#move_up').click ->
-    console.log("boooooooooo")
-    request = new XMLHttpRequest()
-    request.open("post", "http://localhost:3000/pier/up")
-    request.send()
+    console.log("boooooooooo");
+    request = new XMLHttpRequest();
+    request.open("post", "http://localhost:3000/pier/up");
+    request.send();
 
 $('#move_down').click ->
     $.ajax

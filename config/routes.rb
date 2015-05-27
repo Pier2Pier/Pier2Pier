@@ -1,6 +1,9 @@
 Pier::Application.routes.draw do
   get "videoviewer/video"
   get "welcome/index"
+
+  post '/pier/up' => 'pier#up'
+  get '/pier/up' => 'pier#up'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

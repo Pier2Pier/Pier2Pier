@@ -7,33 +7,45 @@ html {
 
 .pier2pier {
     position: absolute;
-    left: 30px;
+    right: 30px;
     top: 5px;
 }
 
 .vidcontainer {
-    width: 810px;
-    height: 610px;
+    width: 600px;
+    height: 480px;
     overflow: auto;
     padding: 1em;
     background: #000;
     margin: auto;
     position: absolute;
-    left: 30px;
-    top: 90px;
+    left: 620px;
+    top: 190px;
+    float: right;
 }
 
-//.vidcontrols {
-//    width: 600px;
-//    height: 50px;
-//    overflow: auto;
-//    padding: 1em;
-//    background: #888888;
-//    margin: auto;
-//    position: absolute;
-//    left: 30px;
-//    top: 570px;
-//}
+
+.container {
+    width: 700px;
+    height: 190px;
+    padding: 1em;
+    background: #000; 
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+}
+
+.vidcontrols {
+    width: 570px;
+    height: 150px;
+    overflow: auto;
+    padding: 1em;
+    background: #888888;
+    margin: auto;
+    position: absolute;
+    left: 8px;
+    top: 490px;
+}
 
 .piccontainer {
     width: 300px;
@@ -59,4 +71,13 @@ html {
     right: 20px;
     top: 380px;
 
+}
+
+.flipped {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }

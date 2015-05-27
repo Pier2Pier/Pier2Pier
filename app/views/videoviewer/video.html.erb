@@ -1,12 +1,13 @@
 <%= stylesheet_link_tag "videoviewer.css.scss" %>
+<script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script>
 <div class="pier2pier">
 <%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
 </div>
 <div id="vidcontainer">Loading the player...</div>
 <div class="vidcontrols">
-<%=image_tag("arrow_up.png", alt: "go up", size: "41x68")%>
+<%= link_to image_tag("arrow_up.png", alt: "go up", size: "41x68"), '/pier/up', id: "move_up", class: 'move_up', :remote => true, method: :post %>
 <br>
-<%=image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped")%>
+<%= link_to image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped"), :id => "move_down", :remote => true %>
 </div>
 
 <div class="piccontainer">

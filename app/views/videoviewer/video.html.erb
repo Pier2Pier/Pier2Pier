@@ -7,7 +7,7 @@
 <div class="vidcontrols">
 <%= link_to image_tag("arrow_up.png", alt: "go up", size: "41x68"), '/pier/up', id: "move_up", class: 'move_up', :remote => true, method: :post %>
 <br>
-<%= link_to image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped"), :id => "move_down", :remote => true %>
+<%= link_to image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped"), 'pier/down', :id => "move_down", :remote => true %>
 </div>
 
 <div class="piccontainer">

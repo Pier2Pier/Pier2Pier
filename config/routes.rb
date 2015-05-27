@@ -4,6 +4,9 @@ Pier::Application.routes.draw do
 
   post '/pier/up' => 'pier#up'
   get '/pier/up' => 'pier#up'
+  
+  post '/pier/down' => 'pier#down'
+  get '/pier/down' => 'pier#down'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

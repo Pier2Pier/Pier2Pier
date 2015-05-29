@@ -1,26 +1,121 @@
 <%= stylesheet_link_tag "videoviewer.css.scss" %>
 <script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script>
 <div class="pier2pier">
-<%=image_tag("pier2pier-logo.png", alt: "Pier2Pier", size: "286x83")%>
+<%=image_tag("pier2pier-logo-white-blue.png", alt: "Pier2Pier", size: "286x83")%>
 </div>
-<div id="vidcontainer">Loading the player...</div>
+<div id="wrapperdiv">
+    <div id="vidcontainer">Loading the player...</div>
+</div>
 <div class="vidcontrols">
-<%= link_to image_tag("arrow_up.png", alt: "go up", size: "41x68"), '/pier/up', id: "move_up", class: 'move_up', :remote => true, method: :post %>
-<br>
-<%= link_to image_tag("arrow_up.png", alt: "go down", size: "41x68", :class => "flipped"), 'pier/down', :id => "move_down", :remote => true %>
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                <%= link_to image_tag("arrow_up.png", alt: "go up", size: "33x55"), '/pier/up', id: "move_up", class: 'move_up', :remote => true, method: :post %>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <%= link_to image_tag("arrow_left.png", alt: "go left", size: "55x33", class: "arrows"), '/pier/left', id: "move_left", class: 'move_left', :remote => true, method: :post %>
+            </td>
+            <td></td>
+            <td>
+                <%= link_to image_tag("arrow_right.png", alt: "go right", size: "55x33", class: "arrows"), '/pier/right', id: "move_right", class: 'move_right', :remote => true, method: :post %>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <%= link_to image_tag("arrow_up.png", alt: "go down", size: "33x55", :class => "flipped"), 'pier/down', :id => "move_down", :remote => true, method: :post %>
+            </td>
+            <td></td>
+        </tr>
+    </table> 
+
 </div>
 
 <div class="piccontainer">
+    <table>
+        <tr>
+            <td>
+                <%= image_tag("fish1.png", alt: "a fish", size: "90x65") %>
+            </td>
+            <td>
+                <%= image_tag("fish2.png", alt: "a fish", size: "90x65") %>
+            </td>
+            <td>
+                <%= image_tag("fish3.png", alt: "a fish", size: "90x65") %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= image_tag("fish4.png", alt: "a fish", size: "90x68") %>
+            </td>
+            <td>
+                <%= image_tag("fish5.png", alt: "a fish", size: "90x67") %>
+            </td>
+            <td>
+                <%= image_tag("fish6.png", alt: "a fish", size: "90x50") %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= image_tag("fish7.png", alt: "a fish", size: "90x67") %>
+            </td>
+            <td>
+                <%= image_tag("fish8.png", alt: "a fish", size: "90x51") %>
+            </td>
+            <td>
+                <%= image_tag("fish9.png", alt: "a fish", size: "90x63") %>
+            </td>
+        </tr>
+    </table> 
 </div>
 
 <div class="loccontainer">
+    <table>
+        <tr>
+            <td>
+                <%= link_to image_tag("fish1.png", alt: "a fish", size: "90x65"), 'pier/1', :id => "goto1", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish2.png", alt: "a fish", size: "90x65"), 'pier/2', :id => "goto2", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish3.png", alt: "a fish", size: "90x65"), 'pier/3', :id => "goto3", :remote => true, method: :post %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= link_to image_tag("fish4.png", alt: "a fish", size: "90x68"), 'pier/4', :id => "goto4", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish5.png", alt: "a fish", size: "90x67"), 'pier/5', :id => "goto5", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish6.png", alt: "a fish", size: "90x50"), 'pier/6', :id => "goto6", :remote => true, method: :post %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= link_to image_tag("fish7.png", alt: "a fish", size: "90x67"), 'pier/7', :id => "goto7", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish8.png", alt: "a fish", size: "90x51"), 'pier/8', :id => "goto8", :remote => true, method: :post %>
+            </td>
+            <td>
+                <%= link_to image_tag("fish9.png", alt: "a fish", size: "90x63"), 'pier/9', :id => "goto9", :remote => true, method: :post %>
+            </td>
+        </tr>
+    </table> 
 </div>
 
 <script type="text/javascript">
     jwplayer("vidcontainer").setup({
         playlist: [{
             sources: [{
-                file: "rtmp://129.65.153.151:1935/live/teststream"
+                file: "rtmp://localhost:1935/live/teststream"
             }]
         }],
         primary: "flash",

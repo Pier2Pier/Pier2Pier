@@ -3,12 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
     background: #0081f8;
+    color: white; 
 }
 
 .pier2pier {
+    width: 700px;
+    height: 160px;
+    border-radius: 5px;
+    padding: 5px;
+    background: #005c9e;
     position: absolute;
     right: 30px;
-    top: 5px;
+    top: 8px;
+    align: center;
+}
+
+div.pier2pier>form {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+div.pier2pier>img {
+    padding-left: 20px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
 }
 
 .vidcontainer {
@@ -47,41 +68,83 @@ html {
 .vidcontrols {
     border-radius: 5px;
     width: 600px;
-    height: 180px;
+    height: 230px;
     overflow: auto;
     padding: 0em;
-    background: #888888;
+    background: #005cf8;
+    /*
+    006df8
+    */
     margin: auto;
     position: absolute;
     left: 8px;
     top: 490px;
 }
 
+div.vidcontrols>table {
+    vertical-align: middle;
+}
+
 .piccontainer {
     border-radius: 5px;
-    width: 300px;
-    height: 240px;
+    width: 310px;
+    height: 250px;
     overflow: auto;
     padding: 1em;
-    background: #888888;
+    background: #005c9e;
     margin: auto;
     position: absolute;
-    right: 20px;
-    top: 90px;
+    right: 30px;
+    top: 440px;
 
+}
+
+div.piccontainer>td { 
+    padding: 10px;
+}
+
+div.piccontainer>table { 
+    margin: 0 auto;
 }
 
 .loccontainer {
     border-radius: 5px;
-    width: 300px;
-    height: 240px;
+    width: 310px;
+    height: 250px;
     overflow: auto;
     padding: 1em;
-    background: #888888;
+    background: #005c9e;
     margin: auto;
     position: absolute;
-    right: 20px;
-    top: 380px;
+    right: 400px;
+    top: 440px;
+
+}
+
+div.loccontainer>td { 
+    padding: 10px;
+}
+
+div.loccontainer>table { 
+    margin: 0 auto;
+}
+
+.blurb {
+    border-radius: 5px;
+    width: 678px;
+    height: 200px;
+    padding: 1em;
+    overflow: auto;
+    background: #005c9e;
+    position: absolute;
+    top: 190px;
+    right:30px;
+}
+
+div.blurb>img {
+    float: left;
+    padding: 10px;
+
 
 }
 

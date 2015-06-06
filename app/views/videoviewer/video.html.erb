@@ -1,7 +1,13 @@
 <%= stylesheet_link_tag "videoviewer.css.scss" %>
 <script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script>
 <div class="pier2pier">
-<%=image_tag("pier2pier-logo-white-blue.png", alt: "Pier2Pier", size: "286x83")%>
+    <%=image_tag("pier2pier-logo-white-blue.png", alt: "Pier2Pier", size: "286x83")%>
+
+    <form>
+        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+   </form>
 </div>
 <div id="wrapperdiv">
     <div id="vidcontainer">Loading the player...</div>
@@ -35,45 +41,52 @@
 
 </div>
 
+<div class="blurb">
+    <%= image_tag("pier.jpg", alt: "Cal Poly Pier", size: "120") %>
+    Pier2Pier is a multi-year project with the goal of making underwater life accessible to people remotely. This is being done by controlling a pod that runs vertically along a piling at the Cal Poly Avila Beach Pier. The feed from the camera inside the pod will be viewable over the Internet to researchers, students, and the general public. One person at a time  will be able to move the pod using the web interface. Other features include capturing and saving a still image or location at the request of the user to be accessed at a later time.<br />
+</div>
+
 <div class="piccontainer">
+    Pictures:
     <table>
         <tr>
             <td>
-                <%= image_tag("fish1.png", alt: "a fish", size: "90x65") %>
+                <%= image_tag("sea1.png", alt: "a seascape") %>
             </td>
             <td>
-                <%= image_tag("fish2.png", alt: "a fish", size: "90x65") %>
+                <%= image_tag("sea2.png", alt: "a seascape") %>
             </td>
             <td>
-                <%= image_tag("fish3.png", alt: "a fish", size: "90x65") %>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= image_tag("fish4.png", alt: "a fish", size: "90x68") %>
-            </td>
-            <td>
-                <%= image_tag("fish5.png", alt: "a fish", size: "90x67") %>
-            </td>
-            <td>
-                <%= image_tag("fish6.png", alt: "a fish", size: "90x50") %>
+                <%= image_tag("sea3.png", alt: "a seascape") %>
             </td>
         </tr>
         <tr>
             <td>
-                <%= image_tag("fish7.png", alt: "a fish", size: "90x67") %>
+                <%= image_tag("sea4.png", alt: "a seascape") %>
             </td>
             <td>
-                <%= image_tag("fish8.png", alt: "a fish", size: "90x51") %>
+                <%= image_tag("sea5.png", alt: "a seascape") %>
             </td>
             <td>
-                <%= image_tag("fish9.png", alt: "a fish", size: "90x63") %>
+                <%= image_tag("sea6.png", alt: "a seacape") %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= image_tag("sea7.png", alt: "a seascape") %>
+            </td>
+            <td>
+                <%= image_tag("sea8.png", alt: "a seascape") %>
+            </td>
+            <td>
+                <%= image_tag("sea9.png", alt: "a seascape") %>
             </td>
         </tr>
     </table> 
 </div>
 
 <div class="loccontainer">
+    Locations:
     <table>
         <tr>
             <td>
@@ -115,7 +128,7 @@
     jwplayer("vidcontainer").setup({
         playlist: [{
             sources: [{
-                file: "rtmp://localhost:1935/live/teststream"
+                file: "rtmp://129.65.152.245:1935/live/teststream"
             }]
         }],
         primary: "flash",

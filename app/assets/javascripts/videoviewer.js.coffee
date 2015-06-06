@@ -5,7 +5,7 @@
 $('#move_up').click ->
     console.log("boooooooooo")
     request = new XMLHttpRequest()
-    request.open("post", "http://localhost:3000/pier/up")
+    request.open("post", "http://129.65.152.245:3000/pier/up")
     request.send()
 
 $('#move_down').click ->
